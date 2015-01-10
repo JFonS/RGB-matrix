@@ -7,7 +7,7 @@ using namespace std;
 using namespace sf;
 
 void imageRegion(string path) {
-  const int cellSize = 40;
+  const int cellSize = 40; //Mida de la cuadricula a la pantalla RGB
   Texture tex;
   tex.loadFromFile(path);
 
@@ -20,7 +20,7 @@ void imageRegion(string path) {
   sprite.setTexture(tex);
   
   RenderWindow windowImg(VideoMode(imgSize.x, imgSize.y), path, Style::Titlebar | Style::Close);
-  RenderWindow windowResult(VideoMode(cellSize * 8, cellSize * 8), "RGM Matrix", Style::Titlebar | Style::Close);
+  RenderWindow windowResult(VideoMode(cellSize * 8, cellSize * 8), "RGB Matrix", Style::Titlebar | Style::Close);
   
   RectangleShape select;
   select.setFillColor(Color(0,255,0,50));
